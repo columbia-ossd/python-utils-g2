@@ -75,6 +75,16 @@ def search(lst, target):
     return found
 
 """
+Function that takes a list and returns the average.
+Ignores anything that is not a number, and returns 0 if the list contains no numbers.
+"""
+def average(lst):
+    numbers = [x for x in lst if isinstance(x, (int, float))]
+    if not numbers:
+        return 0
+    return sum(numbers) / len(numbers)
+
+"""
 Some test cases for the sort and search functions
 """
 def main():
